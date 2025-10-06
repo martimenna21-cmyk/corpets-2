@@ -1,214 +1,486 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CorPet - Employee Pet Benefits</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#99AA86",
-              "primary-foreground": "#54342E",
-              secondary: "#F39386",
-              "background-light": "#FFFFFF",
-              "background-dark": "#1A1A1A",
-              "foreground-light": "#1A1A1A",
-              "foreground-dark": "#F5F5F5",
-              "card-light": "#F5F5F5",
-              "card-dark": "#2A2A2A",
-              "muted-light": "#6B7280",
-              "muted-dark": "#9CA3AF",
-            },
-            fontFamily: {
-              display: ["Manrope", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              lg: "0.75rem",
-              xl: "1rem",
-              full: "9999px",
-            },
-          },
-        },
-      };
-    </script>
-<style>
-      body {
-        font-family: "Manrope", sans-serif;
-      }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CorPets - Employee Pet Benefits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-  </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark">
-<div class="flex flex-col min-h-screen">
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<div class="container mx-auto px-4 py-4 flex justify-between items-center">
-<div class="flex items-center space-x-2">
-<img alt="Corpet Logo" class="h-8 w-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx-D33tv6zroOmlJUL7xkrVwtiK9c2pOcYliBOe-wQAK8oqdipWicWuDCiuZaP-wwXYiJ4QFG9OAroqe-I3iWApPj8A6q5iH7ulWu08mq6bFd42N1-KjJPJyukE2eDjoCtF5kXvKEWnmSsJLLwvl_ui4Owq1YCST8Mj-QOZ5s2wKaqywx4BcC_nnrPrMIGzt_CGwzcpO-TuTUGlCvKjma7avJsuolTBI565oQrQs5IoCFnrWVjROJe8a_Z8uHPIp2JiH5gtxbZb7g"/>
-<h1 class="text-2xl font-bold text-primary">CorPet</h1>
-</div>
-<button class="hidden md:block bg-primary text-primary-foreground font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300">
-            Contact Sales
-          </button>
-<button class="md:hidden text-2xl">
-<i class="fas fa-bars"></i>
-</button>
-</div>
-</header>
-<main class="flex-grow">
-<section class="relative text-center py-20 px-4 bg-card-light dark:bg-card-dark">
-<div class="absolute inset-0 bg-cover bg-center opacity-10 dark:opacity-5" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnhYvymkavPkFw95iPUTcUGMHb6LsR2N5Mm_pSybf4S_H9VLQfMfqe_RUpztQHNesocLjKmkHbn1iEHCwMTh-Y70aguQCx9CYxAborEl-tgbvYr22ShZw0QrJYKzKRGbws4zZzCO2P1PJNtgTR84rW-AYl43hzRKu3VecA9t0ksYKZ2lF8-BMB0SdZhHfG84otM-YIXqnaVceGl1pPtezl5G5aaHfSQ1NOQlBt8XkSxgyun1h4Gun8OeNbtOpRLxw_dh4kh13iTmU");'></div>
-<div class="relative z-10 max-w-4xl mx-auto">
-<h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-              Supporting your team, <span class="text-primary">paws and all</span>
-</h1>
-<p class="text-lg md:text-xl mb-8 text-muted-light dark:text-muted-dark">
-              Offer pet-related services as part of your employee benefits package. Attract and
-              retain top talent with unique perks.
-            </p>
-<button class="bg-primary text-black font-bold py-3 px-8 rounded-full text-lg min-h-[44px] hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">
-              Get Started
-            </button>
-</div>
-</section>
-<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
-<div class="container mx-auto px-4">
-<div class="text-center max-w-3xl mx-auto mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-                Comprehensive Pet Care Solutions
-              </h2>
-<p class="text-lg text-muted-light dark:text-muted-dark">
-                CorPet connects your company with a network of trusted pet care providers, offering a
-                range of services to meet the needs of your employees and their pets.
-              </p>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="bg-secondary/20 text-secondary w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
-<i class="fas fa-paw"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Pet Sitting</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                  Reliable pet sitters for when your employees are away.
-                </p>
-</div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="bg-secondary/20 text-secondary w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
-<i class="fas fa-dog"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Dog Walking</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                  Professional dog walkers to keep pets active and happy.
-                </p>
-</div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="bg-secondary/20 text-secondary w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
-<i class="fas fa-cat"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Veterinary Care</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                  Access to a network of top-rated veterinary clinics.
-                </p>
-</div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="bg-secondary/20 text-secondary w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
-<i class="fas fa-bone"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Grooming Services</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                  Keep pets looking and feeling their best with professional grooming.
-                </p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 md:py-24 bg-card-light dark:bg-card-dark">
-<div class="container mx-auto px-4">
-<div class="text-center max-w-3xl mx-auto mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Real Results for Our Clients</h2>
-<p class="text-lg text-muted-light dark:text-muted-dark">
-                See how CorPet has helped other companies enhance their employee benefits and
-                improve their workplace culture.
-              </p>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-background-light dark:bg-background-dark rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKzvNI6DylPQP1ZGX_GPQYyMMt86bSoYn8adB5OGeUglH9h3_UJnOESWmnqbYviX4rwmVKnKn50Fgi23GaWYezztDcewNZdehY4cXJgBxnA7wuJWxF7KLpgQSdf5m8nPQNC7rnft-UkVt1oC2vN9svFzKL1qLCZl7zI-uUqFKwBe7p7B7yJtUHiFpgA1HYSiptGB5fy8vXdX5fHzRLt86qL-YXGYgujfeD3_aoCOpKCLvJexh_21MbtjPhXHwbCHV9V8JHI1YbVu0")'></div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">25% Increase in Satisfaction</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                    Employees reported higher satisfaction with their benefits package.
-                  </p>
-</div>
-</div>
-<div class="bg-background-light dark:bg-background-dark rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhGaJ4zS9e98QbqRRVI770NY0X7sbsaQQvGSlGuBqH8R-BSh16Cd33puc6yfQ9oOBerz5VaAPrQ_Or76KGZczLRFXgbJfMsh07illaC5nZHZGehbYm0ORwAiUxmLWZNDCZBoNOHkDMEmkvufFid4F2Mj3OGnJVi2AbknxPjc8QaanX0bpbam668SEEstqhnxRbO6JdxE-aqHp87PaqDANb97uvbl4uHSBoRnL5VePlhnFgntiYaQ1SeSvghbSTuO8Zvb_s7rdJUEo")'></div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">15% Reduction in Turnover</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                    Companies saw a significant decrease in employee turnover rates.
-                  </p>
-</div>
-</div>
-<div class="bg-background-light dark:bg-background-dark rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBO5QTNy8gYeSOEW3oQ5XavUHt9nzrice5FUUzUvPJT8FEzyUIOP8VTUhpJBu5ZtFCcMyyV_j4mMsYaun9MiAWycx-VGd01WlklHMTGE65k2a-AVMrNagHl76etQDuNLHU31tDu3jnQKyizCxAsfhU59A5GAS7UINy8U4Ep_9QNaEru1PXgRybzCgsXqUn2za7cLO3f5k0NHtDNwiyYHyx9Wnlr_egUNjc5rr-Xt4DYiMqLm2b7Vug3ayrNpogbzay5EsamD-CgMas")'></div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Boosted Morale &amp; Productivity</h3>
-<p class="text-muted-light dark:text-muted-dark">
-                    Pet-friendly benefits created a more positive work environment.
-                  </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
-<div class="container mx-auto px-4">
-<div class="max-w-xl mx-auto text-center">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
-<p class="text-lg text-muted-light dark:text-muted-dark mb-8">
-                Learn more about how CorPet can benefit your company. Fill out the form below and
-                we'll get back to you shortly.
-              </p>
-<form class="space-y-6">
-<input class="w-full p-4 rounded-lg bg-card-light dark:bg-card-dark border-2 border-transparent focus:border-primary focus:ring-0 transition-colors" placeholder="Your Name" type="text"/>
-<input class="w-full p-4 rounded-lg bg-card-light dark:bg-card-dark border-2 border-transparent focus:border-primary focus:ring-0 transition-colors" placeholder="Your Company Email" type="email"/>
-<textarea class="w-full p-4 rounded-lg bg-card-light dark:bg-card-dark border-2 border-transparent focus:border-primary focus:ring-0 transition-colors" placeholder="Your Message" rows="4"></textarea>
-<button class="w-full bg-primary text-primary-foreground font-bold py-3 px-8 rounded-full text-lg min-h-[44px] hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105" type="submit">
-                  Submit
-                </button>
-</form>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-card-light dark:bg-card-dark">
-<div class="container mx-auto px-4 py-8 text-center text-muted-light dark:text-muted-dark">
-<div class="flex justify-center space-x-6 mb-4">
-<a class="hover:text-primary transition-colors text-2xl" href="#"><i class="fab fa-twitter"></i></a>
-<a class="hover:text-primary transition-colors text-2xl" href="#"><i class="fab fa-facebook"></i></a>
-<a class="hover:text-primary transition-colors text-2xl" href="#"><i class="fab fa-instagram"></i></a>
-<a class="hover:text-primary transition-colors text-2xl" href="#"><i class="fab fa-linkedin"></i></a>
-</div>
-<p>© 2024 CorPet. All rights reserved.</p>
-</div>
-</footer>
-</div>
 
-</body></html>
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+
+    .logo img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .logo span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .btn-contact {
+      background: #99AA86;
+      color: #000000;
+      padding: 10px 24px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-contact:hover {
+      background: #889976;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      padding: 80px 0 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="%23ffffff" opacity="0.1"/></svg>');
+      opacity: 0.5;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero h1 .highlight {
+      color: #99AA86;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .btn-primary {
+      background: #99AA86;
+      color: #000000;
+      padding: 14px 40px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: #889976;
+      transform: translateY(-2px);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto 60px;
+      font-size: 16px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #f8f8f8;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: #ffe5e0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 24px;
+      color: #F39386;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Results Section */
+    .results {
+      padding: 80px 0;
+      background: #f8f8f8;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .result-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .result-image {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .result-content {
+      padding: 30px;
+    }
+
+    .result-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .result-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #99AA86;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: #99AA86;
+      color: #000000;
+      padding: 16px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #889976;
+    }
+
+    /* Footer */
+    footer {
+      background: #f8f8f8;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      color: #666;
+      font-size: 20px;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #99AA86;
+    }
+
+    footer p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .services-grid,
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <img src="Isologo.png" alt="CorPets">
+          <span>CorPets</span>
+        </a>
+        <button class="btn-contact">Contact Sales</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Supporting your Team, <span class="highlight">Paws and All</span></h1>
+        <p>Offer pet-related services as part of your employee benefits package. Attract and retain top talent with unique perks.</p>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Comprehensive Pet Care Solutions</h2>
+      <p class="section-subtitle">CorPets connects your company with a network of trusted pet care providers, offering a range of services to meet the needs of your employees and their pets.</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-paw"></i>
+          </div>
+          <h3>Pet Sitting</h3>
+          <p>Reliable pet sitters for when your employees are away.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-dog"></i>
+          </div>
+          <h3>Dog Walking</h3>
+          <p>Professional dog walkers to keep pets active and happy.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h3>Veterinary Care</h3>
+          <p>Access to a network of top-rated veterinary clinics.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-bone"></i>
+          </div>
+          <h3>Grooming Services</h3>
+          <p>Keep pets looking and feeling their best with professional grooming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="results">
+    <div class="container">
+      <h2 class="section-title">Real Results for Our Clients</h2>
+      <p class="section-subtitle">See how CorPets has helped other companies enhance their employee benefits and improve their workplace culture.</p>
+      
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKzvNI6DylPQP1ZGX_GPQYyMMt86bSoYn8adB5OGeUglH9h3_UJnOESWmnqbYviX4rwmVKnKn50Fgi23GaWYezztDcewNZdehY4cXJgBxnA7wuJWxF7KLpgQSdf5m8nPQNC7rnft-UkVt1oC2vN9svFzKL1qLCZl7zI-uUqFKwBe7p7B7yJtUHiFpgA1HYSiptGB5fy8vXdX5fHzRLt86qL-YXGYgujfeD3_aoCOpKCLvJexh_21MbtjPhXHwbCHV9V8JHI1YbVu0')"></div>
+          <div class="result-content">
+            <h3>25% Increase in Satisfaction</h3>
+            <p>Employees reported higher satisfaction with their benefits package.</p>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-image" style="background: linear-gradient(135deg, #5eb3a8 0%, #4a9187 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; font-weight: 600;">
+            <div style="text-align: center;">
+              <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">COMPANY EVENT</div>
+              <div style="font-size: 12px; margin-top: 8px;">with the team</div>
+            </div>
+          </div>
+          <div class="result-content">
+            <h3>15% Reduction in Turnover</h3>
+            <p>Companies saw a significant decrease in employee turnover rates.</p>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBO5QTNy8gYeSOEW3oQ5XavUHt9nzrice5FUUzUvPJT8FEzyUIOP8VTUhpJBu5ZtFCcMyyV_j4mMsYaun9MiAWycx-VGd01WlklHMTGE65k2a-AVMrNagHl76etQDuNLHU31tDu3jnQKyizCxAsfhU59A5GAS7UINy8U4Ep_9QNaEru1PXgRybzCgsXqUn2za7cLO3f5k0NHtDNwiyYHyx9Wnlr_egUNjc5rr-Xt4DYiMqLm2b7Vug3ayrNpogbzay5EsamD-CgMas')"></div>
+          <div class="result-content">
+            <h3>Boosted Morale & Productivity</h3>
+            <p>Pet-friendly benefits created a more positive work environment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Learn more about how CorPets can benefit your company. Fill out the form below and we'll get back to you shortly.</p>
+      
+      <form action="https://formspree.io/f/xldpnppw" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Company Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="YOUR_LINKEDIN_URL" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:YOUR_EMAIL@corpets.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p>© 2025 CorPets. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
