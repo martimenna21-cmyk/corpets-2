@@ -47,8 +47,8 @@
     }
 
     .logo img {
-      width: 40px;
-      height: auto;
+      width: 32px;
+      height: 32px;
     }
 
     .logo span {
@@ -73,7 +73,7 @@
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.70) 0%, rgba(245, 245, 245, 0.92) 100%), 
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 100%), 
                   url('hero-background.jpg') center/cover;
       padding: 80px 0 100px;
       text-align: center;
@@ -88,7 +88,6 @@
       left: 0;
       right: 0;
       bottom: 0;
-      backdrop-filter: blur(3px);
       z-index: 0;
     }
 
@@ -324,6 +323,93 @@
       color: #99AA86;
     }
 
+    /* Modal/Popup */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #666;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .modal-close:hover {
+      color: #000;
+    }
+
+    .modal-content h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .contact-item:hover {
+      background: #efefef;
+    }
+
+    .contact-item i {
+      font-size: 24px;
+      color: #99AA86;
+      width: 30px;
+    }
+
+    .contact-item a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .contact-item a:hover {
+      color: #99AA86;
+    }
+
     footer p {
       color: #666;
       font-size: 14px;
@@ -355,7 +441,7 @@
           <img src="Isologo.png" alt="CorPets">
           <span>CorPets</span>
         </a>
-        <button class="btn-contact">Contact Sales</button>
+        <button class="btn-contact" onclick="openModal()">Contact Sales</button>
       </div>
     </div>
   </header>
@@ -366,7 +452,7 @@
       <div class="hero-content">
         <h1>Supporting your Team, <span class="highlight">Paws and All</span></h1>
         <p>Offer pet-related services as part of your employee benefits package. Attract and retain top talent with unique perks.</p>
-        <button class="btn-primary">Get Started</button>
+        <a href="#contact" class="btn-primary">Get Started</a>
       </div>
     </div>
   </section>
@@ -453,7 +539,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <p class="section-subtitle">Learn more about how CorPets can benefit your company. Fill out the form below and we'll get back to you shortly.</p>
@@ -483,5 +569,41 @@
       <p>© 2025 CorPets. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <h3>Contact Sales</h3>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:sales@corpets.com">sales@corpets.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('contactModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').classList.remove('active');
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
 </body>
 </html>
